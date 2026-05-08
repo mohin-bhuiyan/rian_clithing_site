@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rian Clothing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg-dark:#0b0f19;
+  --bg-light:#f5f5f5;
+  --accent:#eab308;
+  --text-muted:#9ca3af;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:var(--bg-dark);
+  color:#fff;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 60px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:var(--text-muted);
+  font-size:14px;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:#fff;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 60px;
+  gap:40px;
+}
+
+.hero h1{
+  font-size:46px;
+  line-height:1.2;
+  margin:15px 0;
+}
+
+.hero p{
+  color:var(--text-muted);
+  margin-bottom:25px;
+}
+
+.btn{
+  background:var(--accent);
+  color:#000;
+  padding:12px 28px;
+  text-decoration:none;
+  border-radius:4px;
+  font-weight:500;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(234,179,8,0.3);
+}
+
+.hero img{
+  width:420px;
+  border-radius:10px;
+}
+
+/* FEATURES */
+.features{
+  background:#111827;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  padding:35px 60px;
+  text-align:center;
+  gap:20px;
+}
+
+.feature h4{
+  margin-bottom:5px;
+}
+
+.feature p{
+  font-size:13px;
+  color:var(--text-muted);
+}
+
+/* PRODUCTS */
+.products{
+  background:var(--bg-light);
+  padding:70px 60px;
+  color:#000;
+}
+
+.products h3{
+  margin-bottom:30px;
+  font-weight:600;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.card{
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card img{
+  width:100%;
+}
+
+.card-body{
+  padding:12px;
+}
+
+.card h4{
+  font-size:14px;
+  margin-bottom:5px;
+}
+
+.card p{
+  font-weight:600;
+}
+
+/* SUBSCRIBE */
+.subscribe{
+  background:#000;
+  padding:25px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.subscribe input{
+  padding:12px;
+  width:260px;
+  border:none;
+  outline:none;
+}
+
+.subscribe button{
+  padding:12px 20px;
+  background:var(--accent);
+  border:none;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#020617;
+  padding:50px 60px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+footer h4{
+  margin-bottom:10px;
+}
+
+footer p{
+  font-size:13px;
+  color:var(--text-muted);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  nav{
+    padding:15px 20px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero{
+    flex-direction:column;
+    padding:40px 20px;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:28px;
+  }
+
+  .hero img{
+    width:100%;
+  }
+
+  .features{
+    grid-template-columns:repeat(2,1fr);
+    padding:20px;
+  }
+
+  .products{
+    padding:40px 20px;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .subscribe{
+    flex-direction:column;
+    gap:10px;
+    padding:20px;
+  }
+
+  .subscribe input{
+    width:100%;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">RIAN</div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <small>MODESTY. FAITH. PURPOSE.</small>
+    <h1>CLOTHING THAT REFLECTS YOUR DEEN</h1>
+    <p>Minimal design. Premium quality. Purpose-driven lifestyle.</p>
+    <a href="#" class="btn">Shop Now</a>
+  </div>
+
+  <img src="https://via.placeholder.com/400x450">
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="feature">
+    <h4>Premium Quality</h4>
+    <p>Finest fabrics for comfort</p>
+  </div>
+
+  <div class="feature">
+    <h4>Islamic Values</h4>
+    <p>Inspired by faith</p>
+  </div>
+
+  <div class="feature">
+    <h4>Fast Delivery</h4>
+    <p>Quick shipping</p>
+  </div>
+
+  <div class="feature">
+    <h4>Secure Payment</h4>
+    <p>Safe checkout</p>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <h3>Featured Products</h3>
+
+  <div class="grid">
+    <script>
+      for(let i=1;i<=10;i++){
+        document.write(`
+        <div class="card">
+          <img src="https://via.placeholder.com/250">
+          <div class="card-body">
+            <h4>Product ${i}</h4>
+            <p>৳ ${800 + i*50}</p>
+          </div>
+        </div>
+        `)
+      }
+    </script>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<div class="subscribe">
+  <div>
+    <h4>Stay Connected</h4>
+    <p style="color:#aaa;font-size:14px;">Get updates on new collections</p>
+  </div>
+  <div>
+    <input type="text" placeholder="Enter your email">
+    <button>Subscribe</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>RIAN</h4>
+      <p>A brand with purpose.</p>
+    </div>
+
+    <div>
+      <h4>Links</h4>
+      <p>Home</p>
+      <p>Shop</p>
+    </div>
+
+    <div>
+      <h4>Support</h4>
+      <p>Shipping</p>
+      <p>Refund</p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>Dhaka, Bangladesh</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

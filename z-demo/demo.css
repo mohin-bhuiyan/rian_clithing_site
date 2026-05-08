@@ -1,0 +1,307 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f5f5f5;
+}
+
+/* ========== HEADER - FIXED ========== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 42px;
+    background: rgb(0, 0, 0);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 80px;
+}
+
+header .logo {
+    font-size: 34px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    height: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 20px 30px;
+}
+
+nav a:hover {
+    background-color: rgba(142, 142, 142, 0.584);
+}
+
+.search {
+    width: 20%;
+    display: flex;
+    position: relative;
+}
+
+.search input[type='search'] {
+    background: rgba(237, 237, 237, 0.352);
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 52px;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+.search img {
+    width: 22px;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cart {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cart:hover {
+    background-color: rgba(166, 164, 164, 0.345);
+    transform: scale(1.2);
+}
+
+.cart img {
+    width: 35px;
+}
+
+/* ========== MAIN LAYOUT ========== */
+main {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 80px; /* হেডারের উচ্চতা */
+}
+
+/* ========== SIDEBAR - FIXED ========== */
+.sidebar {
+    position: fixed;
+    top: 80px;        /* হেডারের ঠিক নিচে */
+    left: 0;
+    width: 260px;     /* fixed width */
+    background-color: rgb(52, 51, 51);
+    color: white;
+    padding: 40px 15px;
+    height: calc(100vh - 80px); /* বাকি পুরো উচ্চতা */
+    overflow-y: auto;  /* কন্টেন্ট বেশি হলে সাইডবার স্ক্রল হবে */
+    z-index: 99;
+}
+
+/* সাইডবার স্ক্রলবার স্টাইল */
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #333;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category ul {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 217, 0, 0.22);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.151);
+    padding: 10px 0;
+}
+
+.category ul li {
+    display: inline-block;
+    padding: 18px 22px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.category ul li:hover {
+    background-color: rgb(183, 156, 3);
+    transition: 0.3s;
+    color: black;
+}
+
+/* ========== PRODUCT GALLERY - SCROLLABLE ========== */
+.product-gallery {
+    flex: 1;
+    margin-left: 260px;  /* সাইডবারের প্রস্থ সমান */
+    background-color: rgb(230, 230, 230);
+    padding: 30px;
+    min-height: calc(100vh - 80px);
+}
+
+.product-gallery h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.prod-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+/* ========== PRODUCT CARD ========== */
+.card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card .image {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card:hover .image img {
+    transform: scale(1.05);
+}
+
+.card-info {
+    padding: 15px;
+    background-color: white;
+    flex-shrink: 0;
+}
+
+.card-info .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-info .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e67e22;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    header {
+        padding: 0 15px;
+    }
+    
+    header .logo {
+        font-size: 20px;
+    }
+    
+    nav a {
+        padding: 15px;
+        font-size: 12px;
+    }
+    
+    .search {
+        width: 120px;
+    }
+    
+    .search input[type='search'] {
+        padding: 8px 25px;
+        font-size: 12px;
+    }
+    
+    .cart {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .cart img {
+        width: 20px;
+    }
+    
+    /* মোবাইলে সাইডবার হাইড করে দিতে চাইলে */
+    .sidebar {
+        display: none;
+    }
+    
+    .product-gallery {
+        margin-left: 0;
+        padding: 15px;
+    }
+    
+    .prod-list {
+        gap: 15px;
+    }
+    
+    .card .image {
+        height: 200px;
+    }
+}
+
+/* ট্যাবলেটের জন্য */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sidebar {
+        width: 220px;
+    }
+    
+    .product-gallery {
+        margin-left: 220px;
+    }
+    
+    .prod-list {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+    }
+}
