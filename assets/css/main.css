@@ -1,20 +1,21 @@
 main{
     width:100%;
     display:flex;
-    background-color: red;
+    background-color: #ffffff;
     position: relative;
     /* padding:33px; */
    
 }
 
 .sidebar{
-    
-    background-color: rgb(29, 29, 49);
+    /* display:none; */
+    background-color:#676767;;
     color:white;
     padding:54px 10px;
     min-height: 100vh;
     min-width:50px;
-    width: 15%;
+    max-width: 250px;
+    width: 16%;
 }
 
 .sidebar ul{
@@ -34,11 +35,13 @@ main{
     background-color: rgba(255, 255, 255, 0.151);
 }
 .category ul li{
+    
     display:inline-block;
-    padding:18px 22px;
+    padding:18px 22px 18px 37px;
     width:100%;
     cursor:pointer;
     border-radius: 12px;
+    font-size: 18px;
     
 }
 .category ul li:hover{
@@ -58,19 +61,18 @@ main{
 
 /* product gallery */
 .product-gallery{
-    background-color: rgb(230, 230, 230);
+    /* background-color: #bababa; */
     flex:1;
-    padding:42px;
+    padding:52px;
+    border: 1px solid yellow;
      max-height: 100vh;
     overflow-y: scroll;
-    /* position: sticky; */
-    top:44px;
-  
+  scrollbar-width: none;
 }
 
 .prod-list{
     /* background-color: rgb(132, 0, 0); */
-   padding:33px;
+   padding:0px;
     display:grid;
     grid-template-columns:repeat(auto-fill, minmax(238px, 1fr)) ;
     /* flex-wrap: wrap; */
@@ -81,28 +83,42 @@ main{
 
 
 .card{
+    text-decoration: none;
+    color:black;
     display:flex;
     flex-direction: column;
-    /* background-color: rgb(0, 0, 0); */
+    background: radial-gradient( rgb(255, 255, 255), rgb(175, 175, 175));
     /* height:fit-content; */
     width:100%;
     /* height: 100%; */
     /* max-height: 280px; */
     border-radius: 2px;
-    box-shadow:0px 0px 5px rgba(0, 0, 0, 0.117);
+    box-shadow:0px 0px 5px #00000045;
     overflow: hidden;
+    transition:0.3s;
+
+}
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 5px #92929285;
+}
+.card:hover .image img{
+    
+    transform: scale(1.5) translateY(42px);
 }
 .card .image{
-    height:250px;
+    height:300px;
     overflow: hidden;
     display:flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
+    
 }
 .card .image img{
     width:100%;
     /* height: 100%; */
     object-fit:contain;
+    transition: 0.5s;
 }
 
 
@@ -114,8 +130,8 @@ main{
     flex-direction: column;
     justify-content: center;
     justify-content: space-between;
-    gap:12px;
-    padding:22px 10px 17px 10px;
+    gap:5px;
+    padding:15px 10px 15px 10px;
     background-color: rgba(242, 242, 242, 0.882);
     flex:1;
     /* border: 2px solid red; */

@@ -1,29 +1,13 @@
 
-let arr=[
-    {
-        id:1,
-        image:"assets/images/rect23.png" , 
-        title:"hello world bro",
-        price:340
-    },
-    {
-        id:2,
-        image:"assets/images/rect23.png" , 
-        title:"hello world bro",
-        price:340
-    },
-    {
-        id:3,
-        image:"assets/images/rect23.png" , 
-        title:"hello world bro",
-        price:340
-    }
-
-]
+fetch("/assets/productList.json")
+.then(response => response.json())
+.then(data => product_display(data))
 
 
 
 
+
+function product_display(arr){
 
 
 let prod_list= document.querySelector('.prod-list');
@@ -32,7 +16,7 @@ arr.forEach((data)=>{
 
         let card= document.createElement('a');
         card.className='card';
-        card.href=`pages/product_details.html?id=${data.id}`;
+        card.href=`product_details.html?id=${data.id}`;
         card.innerHTML=`
             <div class="image">
                         <img src="${data.image}" alt="">
@@ -54,3 +38,6 @@ arr.forEach((data)=>{
         prod_list.append(card);
 
 })
+
+
+}

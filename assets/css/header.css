@@ -5,19 +5,22 @@ header{
     width:100%;
     padding:0 42px;
     /* border:1px solid red; */
-    background:linear-gradient(-170deg, black, rgb(47, 47, 85));
+    background:linear-gradient(-170deg, black, rgb(23, 23, 23));
     color:white;
     /* position:sticky;
     top:0px;
     left:0px;
     z-index: 99; */
+    height:72px;
 }
 
 header .logo{
-    font-size:14px;
+    font-size:25px;
     font-weight:bold;
     font-family: sans-serif;
     padding:12px;
+    line-height: 1;
+    color:rgb(186, 158, 1);
 }
 
 header nav{
