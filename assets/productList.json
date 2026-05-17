@@ -1,90 +1,90 @@
 [
     {
         "id":1,
-        "image":"assets/images/backchara8-3.png",
+        "image":"assets/images/image1-89-6-2.png",
         "title":"hojoborolo",
-        "price":340
+        "price":657
     },
 
     {
-        "id":1,
-        "image":"assets/images/ChatGPT Image May 12, 2026, 03_21_50 PM.png",
+        "id":2,
+        "image":"assets/images/rect23.png",
         "title":"hojoborolo",
-        "price":340
+        "price":435
     },
     {
-        "id":1,
+        "id":3,
         "image":"assets/images/backchara8-3.png",
         "title":"hojoborolo",
-        "price":340
+        "price":34680
     },
     {
-        "id":1,
+        "id":4,
         "image":"assets/images/ChatGPT Image May 12, 2026, 03_21_50 PM.png",
         "title":"hojoborolo",
-        "price":340
+        "price":977
     },
     {
-        "id":1,
+        "id":5,
         "image":"assets/images/backchara8-3.png",
         "title":"hojoborolo",
-        "price":340
+        "price":4300
     },
     {
-        "id":1,
+        "id":6,
         "image":"assets/images/ChatGPT Image May 12, 2026, 03_21_50 PM.png",
         "title":"hojoborolo",
         "price":340
     },
     {
-        "id":1,
+        "id":7,
         "image":"assets/images/backchara8-3.png",
         "title":"hojoborolo",
-        "price":340
+        "price":3212
     },
     {
-        "id":1,
+        "id":8,
         "image":"assets/images/ChatGPT Image May 12, 2026, 03_21_50 PM.png",
         "title":"hojoborolo",
-        "price":340
+        "price":5000
     },
 
     {
-        "id":1,
+        "id":9,
         "image":"assets/images/ChatGPT Image May 12, 2026, 03_21_50 PM.png",
         "title":"hojoborolo",
-        "price":340
+        "price":12333
     },
     {
-        "id":1,
+        "id":10,
         "image":"assets/images/backchara8-3.png",
         "title":"hojoborolo",
-        "price":340
+        "price":2000
     },
 
     {
-        "id":1,
+        "id":11,
         "image":"assets/images/backchara8-3.png",
         "title":"hojoborolo",
-        "price":340
+        "price":23400
     },
     {
-        "id":1,
+        "id":12,
         "image":"assets/images/ChatGPT Image May 12, 2026, 03_21_50 PM.png",
         "title":"hojoborolo",
-        "price":340
+        "price":4568999
     },
 
     {
-        "id":1,
+        "id":13,
         "image":"assets/images/ChatGPT Image May 12, 2026, 03_21_50 PM.png",
         "title":"hojoborolo",
-        "price":340
+        "price":4543
     },
     {
-        "id":1,
+        "id":14,
         "image":"assets/images/backchara8-3.png",
         "title":"hojoborolo",
-        "price":340
+        "price":3455
     }
 ] 

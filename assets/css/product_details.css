@@ -41,19 +41,19 @@
 
 /* img-big */
 .img-big{
-    background-color: rgba(0, 0, 0, 0.575);
+    background-color: rgba(0, 0, 0, 0.131);
     width: 502px;
     /* flex: 1; */
     max-height: 80vh;
     /* max-width: 350px; */
-    height: fit-content;
-    /* border-radius: 28px; */
+    border-radius: 18px;
     overflow: hidden;
     border: 1px solid gray;
     padding: 12px;
     display:flex;
     justify-content: center;
     align-items: center;
+
 }
 .img-big img{
     width:100%;
@@ -80,7 +80,7 @@
 }
 
  .price{
-    font-size: 33px;
+    font-size: 23px;
     font-weight: bold;
  }
 
@@ -150,9 +150,10 @@ input[type="number"]{
 
  .wrapper-add-cart{
     display:flex;
+    align-items: center;
     width:100%;
     gap:12px;
-    border:1px solid black
+    /* border:1px solid black */
  }
  .wrapper-add-cart img{
      width:30px;
@@ -161,6 +162,7 @@ input[type="number"]{
  .wrapper-add-cart .add-to-cart{
     font-size: 18px;
     padding:17px 22px;
+    border:none;
     background: black;
     color:white;
     border-radius: 5px;
@@ -169,4 +171,25 @@ input[type="number"]{
     align-items: center;
     justify-content: center;
     gap:12px;
+    cursor: pointer;
+ }
+
+ .wrapper-add-cart .other-butt{
+    background:none;
+    border:none;
+    flex-basis: 57px;
+    padding:12px;
+    height: 100%;
+    border:2px solid rgb(181, 181, 181);
+    border-radius: 12px;
+    cursor: pointer;
+ }
+ .add-to-cart:hover{
+     transition: 0.1s;
+    background-color: #535353;
+ }
+ .wrapper-add-cart .other-butt:hover{
+    transition: 0.3s;
+    background-color: white;
+    filter: invert(1);
  }

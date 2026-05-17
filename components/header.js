@@ -5,7 +5,7 @@ function header_load(){
 
 document.querySelector('header').innerHTML=`
             
-        <div class="logo">BD zone <br> fashion</div>
+        <a href="/index.html"><div class="logo">Kalo Kapor</div></a>
         <nav>
             <a href="index.html">Home</a>
             <a href="">Shop</a>
