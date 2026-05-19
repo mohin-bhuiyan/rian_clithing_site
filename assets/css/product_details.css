@@ -193,3 +193,22 @@ input[type="number"]{
     background-color: white;
     filter: invert(1);
  }
+
+
+
+
+
+ /* product suggestion */
+
+ .suggestion-product{
+   margin:33px 0px;
+ }
+ .suggest-row{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    width:100%;
+    padding:22px;
+    gap:22px;
+
+ }
