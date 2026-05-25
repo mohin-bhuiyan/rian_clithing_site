@@ -1,7 +1,7 @@
 [
     {
         "id":1,
-        "image":"assets/images/image1-89-6-2.png",
+        "image":"assets/images/rect1.png",
         "title":"hojoborolo",
         "price":657
     },
@@ -83,7 +83,7 @@
     },
     {
         "id":14,
-        "image":"assets/images/backchara8-3.png",
+        "image":"assets/images/image1-89-6-2.png",
         "title":"hojoborolo",
         "price":3455
     }

@@ -4,6 +4,10 @@ function header_load(){
 
 
 document.querySelector('header').innerHTML=`
+
+         <div class="hero" style="width:100%; height:30vh; background: linear-gradient(-170deg, rgb(122, 122, 122), rgb(23, 23, 23));;">
+         <img style="height:100%;" src="assets/images/ChatGPT Image May 12, 2026, 03_21_50 PM.png" alt="">
+     </div>
             
         <a href="/index.html"><div class="logo"><span style="font-size:44px">J</span>ing-ra</div></a>
         <nav>
@@ -34,4 +38,22 @@ document.querySelector('header').innerHTML=`
 
 }
 
-header_load();
+// header_load();
+
+
+
+
+
+
+function header_scroll(){
+
+console.log(window);
+
+
+document.addEventListener('scroll', (e)=>{
+    console.log(e);
+})
+
+
+
+}; header_scroll();

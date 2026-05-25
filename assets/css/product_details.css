@@ -1,9 +1,10 @@
-.main{
+main{
     width:100%;
+    padding:0.5em 3em;
 }
 
 .path-bar{
-    background-color: gray;
+    /* background-color: rgb(210, 210, 210); */
 }
 
 .product-wrapper{
@@ -11,9 +12,9 @@
     width:100%;
     justify-content: start;
     gap:33px;
-    border:1px solid yellow;
+    /* border:1px solid yellow; */
     min-height:80vh;
-    padding:33px;
+    padding:23px 0;
 }
 
 /* box1--- */
@@ -24,6 +25,7 @@
 
 /* small img */
 .img-list{
+      visibility: hidden;
       /* background-color: rgb(109, 14, 14); */
       /* border:1px solid black; */
       padding:12px;
@@ -41,14 +43,14 @@
 
 /* img-big */
 .img-big{
-    background-color: rgba(0, 0, 0, 0.131);
+    background-color: rgb(248, 248, 248);
     width: 502px;
     /* flex: 1; */
     max-height: 80vh;
     /* max-width: 350px; */
     border-radius: 18px;
     overflow: hidden;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     padding: 12px;
     display:flex;
     justify-content: center;
@@ -202,13 +204,39 @@ input[type="number"]{
 
  .suggestion-product{
    margin:33px 0px;
+   overflow-x: hidden;
+   position: relative;
+ }
+
+ .sugg-cont-wrapper{
+   position: relative;
+   display:flex;
+   /* overflow-x: scroll; */
  }
  .suggest-row{
     display:flex;
     align-items: center;
     justify-content: flex-start;
     width:100%;
+    /* background-color: red; */
     padding:22px;
-    gap:22px;
+    gap:28px;
+    scrollbar-width: none;
+    transition: 0.3s;
 
  }
+
+  .but-left, .but-right{
+     padding:22px;
+     position:absolute;
+     top:50%;
+     z-index: 99;
+ }
+ .but-left{
+   left:10px;
+ }
+
+ .but-right{
+   right:10px;
+ }
+

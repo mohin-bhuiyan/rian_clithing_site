@@ -9,7 +9,7 @@ fetch("/assets/productList.json")
 
 function product_display(arr){
 
-  console.log(arr);
+  console.log(arr.length);
 
 let prod_list= document.querySelector('.prod-list');
 

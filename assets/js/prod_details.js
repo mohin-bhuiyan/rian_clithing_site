@@ -1,7 +1,10 @@
 
 fetch('/assets/productList.json')
 .then(response=> response.json())
-.then(data => get_id(data))
+.then(data => {
+        get_id(data)
+        suggestion(data);
+})
 
 
 
@@ -148,6 +151,80 @@ if(counter){
 }
 
 
+
+
+
+
+
+// suggestion function
+function suggestion(array){
+
+    let arr_length= array.length;
+
+    let check_arr=[]; //bachai kora random id number ekhane rakhbo
+
+    while(check_arr.length < 8){ //8ta random num nibo
+        let random= Math.floor(Math.random()*arr_length);
+        console.log(random);
+
+        if(!check_arr.includes(random)){
+            check_arr.push(random); 
+        }
+        
+    }
+    console.log(check_arr);
+    
+//  random num gulu diye prod_list theke bachaikora index er object gulu nibo.. 
+   let store_object= check_arr.map((item)=>{
+       return array[item];
+    })
+
+    product_display(store_object)//notun array ta nicher functon e pathabo
+}
+
+
+
+
+
+
+
+// create and add cards
+
+function product_display(arr){
+
+  console.log(arr.length);
+
+let suggest_list= document.querySelector('.suggest-row');
+
+arr.forEach((data)=>{
+
+        let card= document.createElement('a');
+        card.className='card';
+        card.href=`product_details.html?id=${data.id}`;
+        card.innerHTML=`
+            <div class="image">
+                        <img src="${data.image}" alt="">
+                    </div>
+
+                    <div class="card-info">
+                        <!-- left -->
+                        
+                            <h3 class="title">${data.title}</h3>
+                           
+                        <div class="right-side">
+
+                        <div class="price">${data.price} BDT</div>
+                        <div class="add-cart-icon"><img src="assets/fonts&icons/shopping-cart-trolley-icon.webp" alt=""></div>
+                        </div>
+                    </div>
+        `
+        
+        suggest_list.append(card);
+
+})
+
+
+}
 
 
 
