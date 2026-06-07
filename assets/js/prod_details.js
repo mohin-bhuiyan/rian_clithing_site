@@ -228,3 +228,4 @@ arr.forEach((data)=>{
 
 
 
+// console.log(window.location.search);

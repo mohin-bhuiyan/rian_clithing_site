@@ -68,7 +68,7 @@ main{
     flex:1;
     padding:52px;
     /* border: 1px solid yellow; */
-     max-height: calc(100vh - 72px);
+     /* max-height: calc(100vh - 72px); */
     /* overflow-y: scroll; */
     scroll-behavior: smooth;
   scrollbar-width: none;

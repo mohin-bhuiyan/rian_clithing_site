@@ -3,9 +3,9 @@ main{
     padding:0.5em 3em;
 }
 
-.path-bar{
-    /* background-color: rgb(210, 210, 210); */
-}
+/* .path-bar{
+    background-color: rgb(210, 210, 210);
+} */
 
 .product-wrapper{
     display:flex;
