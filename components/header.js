@@ -54,6 +54,7 @@ document.querySelector('header').innerHTML=`
 
 header_load();
 
+// ei "hesder_load()" functionta onno ekta javascript e call korechi.. "cart-add-local.js"
 
 
 function header_scroll(){
@@ -63,6 +64,3 @@ function header_scroll(){
 // })
 
 }; header_scroll();
-
-
-localStorage.removeItem("jingra_cart");

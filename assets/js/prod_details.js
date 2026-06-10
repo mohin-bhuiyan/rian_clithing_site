@@ -159,6 +159,7 @@ if(counter){
 
 
 
+
 // suggestion function
 function suggestion(array){
 
