@@ -1,8 +1,9 @@
 
 main{
    color: #e7e6e6;
-    background-color: rgb(19, 10, 10);
+    background-color: #000000;
     padding:42px;
+    min-height: 90vh;
 }
 .cart-list-container{
     
@@ -90,6 +91,7 @@ main{
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-evenly;
+    margin-left:auto;
 }
 
 .card-remove{
@@ -100,6 +102,7 @@ main{
     border:1px solid #ad2b2b;
     padding:8px;
     border-radius: 12px;
+    margin:auto;
 }
 .card-remove:hover{
      color:#ef4444;
@@ -135,7 +138,7 @@ main{
     background-color: #80808038;
 }
 
-input[type="number"]{
+.quantity .q-wrapper input[type="number"]{
     outline: none;
     width:40px;
     text-align: center;
@@ -174,8 +177,143 @@ input[type="number"]{
     color:rgb(131, 131, 131);
  }
  .order-summary button{
-    background:red;
+    background:rgb(179, 57, 57);
     padding:12px;
     border:none;
     border-radius: 6px;
+    cursor: pointer;
+ }
+ .order-summary button:hover{
+    background:#ee3131;
+ }
+
+
+
+
+
+
+ /* --checkout section ---*/
+
+  .checkout-section{
+    padding-top:33px;
+  }
+
+  .checkout-section h2{
+    margin-bottom: 44px;
+  }
+  .back-to-checkout-butt{
+     margin-bottom: 6px;
+     padding:8px;
+     cursor: pointer;
+  }
+
+  .checkout-container{
+    display: grid;
+    gap:44px;
+    grid-template-columns: 2fr 1.2fr;
+    /* border:1px solid red; */
+  }
+
+
+  /* form */
+  .form-cell{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+  }
+  /* 1 */
+  .shipping-info{
+    margin-bottom: 33px;
+  }
+ .shipping-info form{
+   width:100%;
+   padding: 33px 0;
+ }
+
+ .shipping-info form div{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+    padding-bottom:16px;
+
+ }
+
+ form div label{
+    color:gray;
+ }
+ form div input,form div select{
+    background: #ffffff17;
+    outline: none;
+    border: none;
+    /* border:1px solid #fe5555; */
+    width:100%;
+    padding:14px 9px;
+    border:1px solid rgba(113, 113, 113, 0.197);
+    border-radius: 7px;
+    color:white;
+ }
+ 
+ form div textarea{
+    background: rgba(255, 255, 255, 0.136);
+    outline:none;
+    border:none;
+    height: 80px;
+    width:100%;
+    border-radius: 7px;
+    padding:14px;
+ }
+ form div input:focus, form div select:focus,form div textarea:focus{
+    border:1px solid red;
+ } 
+
+  .shipping-info form .form-row{
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+    padding:0;
+ }
+
+
+ /* 2 */
+ .payment-meth-container > div{
+    display:flex;
+    flex-direction: column;
+    margin:16px 0;
+ }
+
+ .payment-meth-container div label{
+    display: flex;
+    padding:23px;
+    gap:12px;
+    background-color: #59575751;
+    border-radius: 12px;
+    accent-color: red;
+ }
+ 
+
+
+
+ /* --------animation hide -------- */
+ .checkout-section, .card-section{
+    display:none;
+    transition: 0.5s;
+     animation-name: sec_visi;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+ }
+ .visible-section{
+    display: block;
+ }
+
+ @keyframes sec_visi {
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
  }

@@ -14,8 +14,6 @@ fetch('/assets/productList.json')
 
 function get_id(prod_list_json){
 
-    // console.log(prod_list_json);
-
     // get id rom url
     const param = new URLSearchParams(document.location.search);
     let prod_id= parseInt(param.get('id'));
@@ -51,6 +49,7 @@ function get_id(prod_list_json){
     let big_image= document.querySelector('.img-big img');
     let title= document.querySelector('h1');
     let price= document.querySelector('h3');
+    let add_cart_btn= document.querySelector('.add-to-cart');
    
 
 
@@ -59,6 +58,8 @@ function get_id(prod_list_json){
     big_image.src=gotten_product.image;
     title.textContent=gotten_product.title;
      price.textContent=gotten_product.price +" "+'BDT';
+     add_cart_btn.setAttribute('data-id', gotten_product.id);
+
 
     }else{
          big_image.src='';
@@ -74,21 +75,23 @@ function get_id(prod_list_json){
 
 
 
+
+
 // size toggle
 let size_wraper= document.querySelector('.size');
-let buttons= size_wraper.querySelectorAll('button')
+let buttons= size_wraper.querySelectorAll('.size-but')
 
 buttons.forEach(element => {
 
     element.addEventListener('click', ()=>{
 
         if(element.classList.contains("active")){
-            // jodi ei button taalready acive hoy tahole sob button er active remove korbe.. 
+            // jodi ei button already active hoy tahole sob button er active remove korbe.. 
              buttons.forEach(but=>{
                 but.classList.remove('active');
              })
              
-        }else{/* ar jodi acive na tahke tahoel agee sob gulur theke remove koro ebong sudhu ei ektay active koro*/
+        }else{/* ar jodi active na tahke tahoel agee sob gulur theke remove koro ebong sudhu ei ektay active koro*/
                   
                    buttons.forEach(but=>{
                 but.classList.remove('active')
@@ -165,14 +168,14 @@ function suggestion(array){
 
     while(check_arr.length < 8){ //8ta random num nibo
         let random= Math.floor(Math.random()*arr_length);
-        console.log(random);
+        // console.log(random);
 
         if(!check_arr.includes(random)){
             check_arr.push(random); 
         }
         
     }
-    console.log(check_arr);
+    // console.log(check_arr);
     
 //  random num gulu diye prod_list theke bachaikora index er object gulu nibo.. 
    let store_object= check_arr.map((item)=>{
@@ -192,7 +195,6 @@ function suggestion(array){
 
 function product_display(arr){
 
-  console.log(arr.length);
 
 let suggest_list= document.querySelector('.suggest-row');
 
@@ -228,4 +230,14 @@ arr.forEach((data)=>{
 
 
 
-// console.log(window.location.search);
+// document.addEventListener("click", (e)=>{
+
+//     if(e.target.classList.contains('add-to-cart')){
+//          console.log(true);
+
+//          console.log(e);
+//     }else{
+//         console.log(false);
+//     };
+   
+// })

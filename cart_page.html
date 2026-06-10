@@ -17,8 +17,9 @@
 
 
        <main>
- <h1>Your Cart</h1>
 
+<section class="card-section visible-section">
+ <h1>Your Cart</h1>
 
         <div class="cart-list-container">
 
@@ -127,26 +128,16 @@
                                  </div>
                               </div>
 
-                               <button class="card-remove">Remove</button>
+                               <button class="card-remove">Remove this product</button>
                         </div>
 
                     </div>
 
                 </div> <!--card end-->
-
-
-
-                
-
-
-
-
+              
         </div> <!--cart-list end-->
 
-
-
-
-
+<!-- order-summary -->
         <div class="order-summary">
             <h2>Order Summary</h2>
     
@@ -171,16 +162,121 @@
                 </div >
             </div>
 
-            <button class="proceed">Proceed To Checkout</button>
+            <button class="proceed-checkout">Proceed To Checkout</button>
         </div>
 
 </div><!--container end-->
+</section>
+
+
+
+
+
+
+<!--checkout section section -->
+ <section class="checkout-section ">
+
+    <h2>CHECKOUT</h2>
+    <p class="back-to-checkout-butt">←Back To Cart<p>
+
+    <div class="checkout-container"><!--checkout--container-->
+
+    <div class="form-cell"><!--parent-->
+       <!-- 1 -->
+       <div class="shipping-info">
+        <h3>01. Shipping Information</h3>
+           <form action="">
+             <div>
+                <label for="name">Full Name</label>
+                <input type="text" name="" id="name" placeholder="Your Name">
+             </div>
+
+             <div class="form-row"><!--row-->
+                <div>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="01XXXXXXXXXX">
+             </div>
+
+             <div>
+                <label for="city">City</label>
+                <select name="" id="city">
+                    <option value="">Dhaka</option>
+                    <option value="">narayanganj</option>
+                    <option value="">rajsahi</option>
+                </select>
+             </div>
+             
+             </div><!--row-->
+
+             <div>
+                <label for="address">Full Delivery Address</label>
+                <textarea name="" id="address" placeholder="Your Address"></textarea>
+             </div>
+
+           </form>
+       </div>
+
+       <!-- 2 -->
+        <div class="payment-meth-container">
+             <h3>02. Payment Method</h3>
+
+             <div>
+                <label for="cashon">
+                    <input type="radio" name="payment" id="cashon" checked>
+                    <p>Cash On Delivery (COD)</p>
+                </label>
+                <br>
+                <label for="bkash">
+                    <input type="radio" name="payment" id="bkash">
+                    <p>Bkash/Nagad Wallet</p>
+                </label>
+             </div>
+        </div>
+
+    </div>
+
+     <!-- more>>> -->
+      <div class="side-bar-cell">
+        <!-- order summary -->
+              <div class="order-summary">
+            <h2>Order Summary</h2>
+    
+            <div class="price-list">
+
+                <div class="prices">
+                    <span>subtotal</span>
+                     <span>3000 BDT</span>
+                </div >
+                <div class="prices">
+                    <span>Delivery Fee</span>
+                    <span>90BDT</span>
+                </div >
+                <div class="prices">
+                    <span>Tax</span>
+                    <span>0 BDT</span>
+                </div >
+
+                <div class="prices">
+                    <span>Total</span>
+                    <span>33333 BDT</span>
+                </div >
+            </div>
+
+            <button class="confirm-order">Confirm-Order</button>
+             </div>
+      </div>
+
+   </div><!--checkout end-->
+
+ </section>
 
 
        </main>
 
 
 
+       <script src="components/footer.js"></script>
        <script src="assets/js/cart-page.js"></script>
+      
 </body>
 </html>

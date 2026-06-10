@@ -159,6 +159,7 @@ input[type="number"]{
  }
  .wrapper-add-cart img{
      width:30px;
+     pointer-events: none;
  }
 
  .wrapper-add-cart .add-to-cart{
