@@ -231,14 +231,15 @@ arr.forEach((data)=>{
 
 
 
-// document.addEventListener("click", (e)=>{
+document.addEventListener("click", (e)=>{
 
-//     if(e.target.classList.contains('add-to-cart')){
-//          console.log(true);
-
-//          console.log(e);
-//     }else{
-//         console.log(false);
-//     };
+    if(e.target.classList.contains('add-to-cart')){
+         console.log(true);
+          
+        //  console.log(e.target.closest())
+         console.log(e);
+    }else{
+        console.log(false);
+    };
    
-// })
+})

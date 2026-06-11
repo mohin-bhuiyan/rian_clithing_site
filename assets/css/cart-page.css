@@ -32,7 +32,7 @@ main{
    border: 1px solid rgba(86, 86, 86, 0.591);
     overflow: hidden;
     transition:0.3s;
-
+    gap:1.5em;
 }
 
 

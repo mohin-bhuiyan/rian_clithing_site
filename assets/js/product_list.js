@@ -38,6 +38,12 @@ arr.forEach((data)=>{
         
         prod_list.append(card);
 
+        // let add_card_icon=document.querySelector('.add-cart-icon');
+        // add_card_icon.addEventListener('click',(e)=>{
+        //     e.stopPropagation();
+            
+        // })
+
 })
 
 
