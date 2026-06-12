@@ -9,12 +9,17 @@ add_card_btn.addEventListener('click', ()=>{
           
         //   local storage e cart array thake tahole oita collect korbo, na thakle khali array nibo-----
                let local_data= localStorage.getItem('jingra_cart');
-               let cart= local_data ? JSON.parse(local_data) : [];
+               let cart=[];
+               try { 
+                  cart= local_data ? JSON.parse(local_data) : [];
+               } catch (error) {
+                  cart=[];
+               }
 
 
 
                                                                             // agee check korbo je ei produc ta ki already loacalstorage e select kora ache kina .. 
-               let existing_product= cart.find(item=> item.id===this_prod_id);
+               let existing_product= cart.find(item=> item.id===this_prod_id && item.size===size);
 
                                           //    jodi na thake tahole ei object ta push korbo
                if(!existing_product){
@@ -30,7 +35,7 @@ add_card_btn.addEventListener('click', ()=>{
                 localStorage.setItem('jingra_cart',JSON.stringify(cart));
 
                }else{ 
-                alert("Oops! This product is already added!!"+`--${this_prod_id}`)
+                alert("Oops! This product is already added!!"+`--${this_prod_id} size:${size}`)
                }
 
                console.log(cart)

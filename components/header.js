@@ -6,7 +6,12 @@ function header_load(){
     let cart_number;
 
     if(from_local){
-        cart_number= JSON.parse(from_local).length;
+        try {   //jodi json file crrupted hoye tahole parse error theke bachte 
+            cart_number= JSON.parse(from_local).length;
+        } catch (error) {
+            cart_number=0;
+        }
+        
     }else{
         cart_number=0;
     }
